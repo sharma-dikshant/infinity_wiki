@@ -5,24 +5,29 @@
   <head>
     <title>Infinity Wiki</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-    <link rel="shortcut icon" href="{% static "img/logo.svg" %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static "img/logo.svg" %}"
+    type="image/x-icon">
   </head>
   <body>
-    <form method="POST">
-      {% csrf_token %}
-      <input
-        type="text"
-        name="query"
-        placeholder="Ask Infinity Wiki"
-        required
-      />
-      <button type="submit">Search</button>
-    </form>
+    <div class="container">
+      <form method="POST">
+        {% csrf_token %}
+        <input
+          type="text"
+          name="query"
+          id="search-bar"
+          placeholder="Ask Infinity Wiki"
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
 
-    {% if result %}
-    <div>
-      <div>{{ result | safe}}</div>
+      {% if result %}
+      <div class="result" id="result">
+        <div>{{ result | safe}}</div>
+      </div>
     </div>
-    {% endif %}
+    {% endif %} 
+    <script src="{% static "js/home.js" %}"></script>
   </body>
 </html>
