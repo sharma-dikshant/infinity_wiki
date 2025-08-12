@@ -4,10 +4,10 @@
 <html>
   <head>
     <title>Infinity Wiki</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link rel="shortcut icon" href="{% static "img/logo.svg" %}" type="image/x-icon">
   </head>
   <body>
-    <h1>Infinity Wiki</h1>
     <form method="POST">
       {% csrf_token %}
       <input

@@ -1,5 +1,75 @@
+/* style.css */
+
+/* Import a modern premium-looking font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Base Page Styling */
 body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+  background: #fffbea; /* pale yellow-white */
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Title */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  color: #222;
+  letter-spacing: -0.5px;
+}
+
+/* Form Styling */
+form {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  background: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+}
+
+input[type="text"] {
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  width: 250px;
+  background-color: #faf8f0;
+}
+
+button {
+  background: #f9c74f;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #f9844a;
+  color: white;
+}
+
+/* Result Section */
+div > div {
+  margin-top: 2rem;
+  background: #fffdf5;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.06);
+  line-height: 1.6;
 }
