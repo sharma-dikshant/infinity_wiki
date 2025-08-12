@@ -2,23 +2,27 @@
 
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Infinity Wiki</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
     <h1>Infinity Wiki</h1>
     <form method="POST">
-        {% csrf_token %}
-        <input type="text" name="query" placeholder="Ask Infinity Wiki" required>
-        <button type="submit">Search</button>
+      {% csrf_token %}
+      <input
+        type="text"
+        name="query"
+        placeholder="Ask Infinity Wiki"
+        required
+      />
+      <button type="submit">Search</button>
     </form>
 
     {% if result %}
-        <div>
-            <h2>Result:</h2>
-            <p>{{ result }}</p>
-        </div>
+    <div>
+      <div>{{ result | safe}}</div>
+    </div>
     {% endif %}
-</body>
+  </body>
 </html>
